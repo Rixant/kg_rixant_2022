@@ -1,6 +1,13 @@
 
-const array1 = [3, 25, 209];
-const array2 = [10, 300, 5];
+
+/***
+ * 
+ *  This program intends to convert an array of integers into
+ *  an array of strings representing the phonetic equivalent of
+ *  the integer
+ * 
+ ***/
+
 
 const numbers = {
     "0" : "Zero",
@@ -15,21 +22,35 @@ const numbers = {
     "9" : "Nine"
 }
 
-
 const phonetic_list = [];
 
-for (i = 0; i < array1.length; i++){
+function numbersToString(test_array){  
 
-    let number_in_words = "";
+    for (i = 0; i < test_array.length; i++){
 
-    for (j = 0; j < array1[i].toString().length; j++){
+        let number_in_words = "";
 
-        number_in_words += numbers[array1[i].toString().charAt(j)];
+        for (j = 0; j < test_array[i].toString().length; j++){
+
+            number_in_words += numbers[test_array[i].toString().charAt(j)];
+
+        }
+
+        phonetic_list[i] = number_in_words;
 
     }
 
-    phonetic_list[i] = number_in_words;
+    return phonetic_list;
 
 }
 
-console.log(phonetic_list)
+test_array = [];
+
+m = process.argv.length - 2 ;
+ 
+ for (i = 0; i < m; i++){
+
+    test_array[i] = process.argv[i+2];
+ }
+
+ console.log(numbersToString(test_array).toString())
