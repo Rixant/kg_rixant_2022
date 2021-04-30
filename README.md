@@ -1,4 +1,4 @@
-# kg_rixant_2022
+# Kargo Assessment Exam
 This repository contains the assessment test for Kargo.
 It consists of two files:
 1. index.js - HTML testing homepage
@@ -12,7 +12,7 @@ Open the index.html in browser and test it from console
 
 ### 2. Using Terminal or Command Prompt
 Open terminal and type:
-'''javascript
+```javascript
 node main.js 100 231 378
-'''
+```
 Expected Result: OneZeroZero, TwoThreeOne, ThreeSevenEight
